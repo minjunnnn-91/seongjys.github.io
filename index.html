@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Room Temperature Control Panel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="start-button">조절 시작하기</button>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-message">Message</h2>
+        </div>
+    </div>
+    <div id="alert-popup" style="display:none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(255, 0, 0, 0.8); color: white; padding: 20px 40px; font-size: 18px; border-radius: 10px; text-align: center; z-index: 9999;">
+        <strong>경고!</strong><br>
+        <span id="alert-message"></span>
+    </div>
+
+    <p id="lock-status"></p>    
+    <div id="console">
+        <h1>Server Room Temperature Control Panel</h1>
+        <div id="temperature">외부 온도 : <span id="temp">25</span>°C</div>
+        <div id="server-bar" style="width: 100%; background-color: #444; height: 30px; margin: 20px 0;">
+            <div id="server-bar-inner" style="height: 100%; background-color: #28a745;"></div>
+        </div>
+        <div id="external-temperature">실험실 온도: <span id="external-temp-value">25</span>°C</div>
+        
+        <div id="external-bar" style="width: 100%; background-color: #444; height: 30px; margin: 20px 0;">
+            <div id="external-bar-inner" style="height: 100%; background-color: #ff6347;"></div>
+        </div>
+        
+        <div id="instructions">W키와 S키를 사용해서 서버 온도와 실내 온도를 조절하세요<!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+        </head>
+        <body>
+            
+        </body>
+        </html></div>
+        
+        <div id="accuracy">정확도 : 100%</div>
+
+        <div id="result"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
