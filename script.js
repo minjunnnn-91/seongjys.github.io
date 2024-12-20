@@ -14,7 +14,7 @@ let inRangeTime = 0;
 let totalTime = 0;
 let interval;
 
-const gameDuration = 120;
+const gameDuration = 90;
 
 const startButton = document.getElementById('start-button');
 
